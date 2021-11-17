@@ -12,7 +12,7 @@ module.exports = async function getConfig(limitConfig, check, output) {
     metafile: true,
     treeShaking: true,
 
-    allowOverwrite: check.import ? true : false,
+    allowOverwrite: !!check.import,
     bundle: true,
     minifyWhitespace: true,
     minifyIdentifiers: true,
